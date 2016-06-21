@@ -1,0 +1,98 @@
+@media screen and (max-width: 1200px) {
+    .navigation {
+        .nav {
+            .navwrap {
+                ul {
+                    li {
+                        a {
+                            margin-right: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 992px) {
+    .navigation {
+        .nav {
+            ul {
+                height       : auto;
+                margin-bottom: 0;
+            }
+            .infos {
+                position: absolute;
+                z-index : 999999;
+                left    : 0;
+                width   : auto;
+                ul {
+                    float      : none;
+                    margin-left: 120px;
+                    li {
+                        display: none;
+                        &.icon {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+        .logo {
+            a {
+                z-index: 999999;
+                top    : 5px;
+                left   : 15px;
+                img {
+                    width: 110px;
+                }
+            }
+            .jubilaeum {
+                display: none;
+            }
+        }
+    }
+    .submenu {
+        display: none;
+    }
+    .infoboxwrap {
+        .infobox {
+            .redbox {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    main {
+        .carousel-vis {
+            height: 460px;
+            .item {
+                height: 359px;
+                .slide-text {
+                    bottom : auto;
+                    top    : 355px;
+                    padding: 0;
+                    h3 {
+                        font-size    : $headline;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .item-skip {
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 400px) {
+    main {
+        .carousel-vis {
+            .item {
+                .slide-text {
+                    top: 345px;
+                }
+            }
+            .item-skip {
+                display: none;
+            }
+        }
+    }
+}

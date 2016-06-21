@@ -1,0 +1,37 @@
+//================================================//
+// Everything related to typography               //
+//================================================//
+
+$base-font-size: 18px;
+$lauftext: 16px;
+$headline: 28px;
+$intro: 44px;
+
+$headlineSub: 24px;
+$headlineH3: 20px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Titillium Web",sans-serif;
+	line-height: inital;
+	margin-bottom: 20px;
+	display: block;
+}
+
+h1 {
+	font-size : $headline;
+	margin-top: 0;
+	color     : $blue;
+}
+
+h2 {
+		font-size: $headlineSub;
+}
+
+h3 {
+	font-size: $headlineH3;
+}

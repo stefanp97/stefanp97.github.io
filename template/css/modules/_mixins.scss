@@ -1,0 +1,72 @@
+// gradient - @include background-gradient(#000, #FFF, 'vertical');
+@mixin background-gradient($startColor, $endColor, $orientation: '') {
+    background: $startColor;
+
+    @if $orientation == 'vertical' {
+        background: -webkit-linear-gradient(top, $startColor, $endColor);
+        background: linear-gradient(to bottom, $startColor, $endColor);
+    }
+
+    @else if $orientation == 'horizontal' {
+        background: -webkit-linear-gradient(left, $startColor, $endColor);
+        background: linear-gradient(to right, $startColor, $endColor);
+    }
+
+    @else {
+        background: -webkit-radial-gradient(center, ellipse cover, $startColor, $endColor);
+        background: radial-gradient(ellipse at center, $startColor, $endColor);
+    }
+}
+// center elements - @include center-element;
+@mixin center-element {
+    display     : block;
+    margin-left : auto;
+    margin-right: auto;
+}
+// center elements vert - @include vertically-centred;
+@mixin vertically-centred {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+}
+// clear floats - @include clearfix;
+@mixin clearfix {
+    *zoom: 1;
+
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+// positioning - @include position(absolute, 10px, 10px, 10px, 10px);
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $type;
+    top     : $top;
+    right   : $right;
+    bottom  : $bottom;
+    left    : $left;
+}
+// set size - @include size(300px); or @include size(300px, 600px);
+@mixin size($width, $height: $width) {
+    width : $width;
+    height: $height;
+}
+// reset padding - @include nopadding-list;
+@mixin nopadding-list {
+    list-style: none;
+    padding   : 0;
+    margin    : 0;
+}
+// center absolute positioned elements -  @include center-absolute(-50%, -50%);
+@mixin center-absolute($top: null, $left: null) {
+    -ms-transform    : translate($left, $top);
+    -webkit-transform: translate($left, $top);
+    -moz-transform   : translate($left, $top);
+    -o-transform     : translate($left, $top);
+    transform        : translate($left, $top);
+}

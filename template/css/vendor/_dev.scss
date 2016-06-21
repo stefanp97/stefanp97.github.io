@@ -1,0 +1,32 @@
+// developer-output
+.debug {
+    display         : none;
+    font-family     : 'Consolas', sans-serif;
+    font-size       : 14px;
+    background-color: black;
+    color           : orange;
+    position        : fixed;
+    padding         : 10px;
+    border-top      : 3px solid orange;
+    bottom          : 0;
+    left            : 0;
+    min-width       : 100%;
+    transition      : all ease 500ms;
+
+    &:before {
+        content    : "Console Output";
+        font-size  : 16px;
+        font-weight: bold;
+    }
+
+    i {
+        position : absolute;
+        right    : 10px;
+        font-size: 18px;
+    }
+
+    .output {
+        display : none;
+        position: relative;
+    }
+}

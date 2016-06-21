@@ -1,0 +1,53 @@
+// Font weights
+$light: 100;
+$regular: 400;
+$bold: 600;
+$small: 12px; // Base Font
+$base-font-family: 'Titillium Web', sans-serif;
+$base-font-weight: $regular;
+
+$base-line-height: 1.4; // Fixed Font
+// $fixed-font-family: 'Titillium Web', sans-serif;
+// $fixed-font-size: 85%;
+// $fixed-line-height: $base-line-height;
+// Headings
+$header-font-weight: $bold; // Text-Transform
+$upper: uppercase;
+
+$transition: all 0.2s;
+
+// Mixins
+@mixin gap($height) {
+	display: block;
+	height : $height;
+}
+@mixin button($bgc1, $bgc2, $color) {
+	background-image : -webkit-linear-gradient(top,$bgc1 0,$bgc2 100%);
+	background-image : -o-linear-gradient(top,$bgc1 0,$bgc2 100%);
+	background-image : -webkit-gradient(linear,left top,left bottom,from($bgc1),to($bgc2));
+	background-image : linear-gradient(to bottom,$bgc1 0,$bgc2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=  '$bgc1', endColorstr='$bgc2', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	background-repeat: repeat-x;
+	border           : 1px solid $color;
+	font-family      : Arial;
+	font-weight      : bold;
+	color            : $color;
+	box-shadow       : inset 0 3px 5px 0 rgba(255,255,255,0.3);
+	padding          : 10px;
+	border-radius    : 5px;
+
+	&:active,
+	&:hover {
+		background-color: $bgc1;
+		color           : $white;
+	}
+}
+
+body {
+	background-position: top center;
+	background-repeat  : no-repeat;
+	font-family        : $base-font-family;
+	background-color   : $dark-grey;
+	font-size          : $lauftext;
+}

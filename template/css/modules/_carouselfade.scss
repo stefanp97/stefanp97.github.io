@@ -1,0 +1,156 @@
+.carousel-vis {
+    position        : relative;
+    height          : 720px;
+    width           : 100%;
+    max-width       : 100%;
+    margin          : 0 auto;
+    overflow        : hidden;
+    background-color: $blue;
+    .item {
+        position           : absolute;
+        overflow           : visible;
+        display            : block;
+        z-index            : 0;
+        right              : 100%;
+        width              : 100%;
+        height             : 535px;
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center center;
+        &.active {
+            z-index: 10;
+            right  : 0;
+            .overlay {
+                right     : -250px;
+                transition: all 400ms ease;
+            }
+        }
+        img {
+            max-width: 100%;
+            height   : auto;
+            display  : none;
+        }
+        .overlay {
+            display         : none;
+            position        : absolute;
+            background-color: #333;
+            height          : 1000px;
+            width           : 600px;
+            z-index         : 10;
+            transform       : rotate(35deg);
+            opacity         : 0.8;
+            right           : -100%;
+            top             : -25px;
+        }
+        // .caption {
+        //     // display  : none;
+        //     position : absolute;
+        //     bottom   : 150px;
+        //     right    : -100%;
+        //     z-index  : 15;
+        //     font-size: 30px;
+        //     color    : white !important;
+        // }
+        .caption {
+            display: none;
+        }
+    }
+    .toggler {
+        display          : none;
+        padding          : 0;
+        bottom           : 120px;
+        position         : absolute;
+        text-align       : center;
+        left             : 50%;
+        -ms-transform    : translate(-50%, 0);
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform   : translate(-50%, 0);
+        -o-transform     : translate(-50%, 0);
+        transform        : translate(-50%, 0);
+        z-index          : 11;
+        li {
+            border          : none;
+            width           : 16px;
+            height          : 16px;
+            background-color: #333;
+            margin          : 0;
+            border-radius   : 16px;
+            margin-left     : 11px;
+            display         : inline-block;
+            cursor          : pointer;
+            &.active {
+                background-color: #ccc;
+            }
+        }
+    }
+    .slide-text {
+        color      : white;
+        position   : absolute;
+        bottom     : -140px;
+        text-align : center;
+        left       : 50%;
+        width      : 100%;
+        margin-left: -50%;
+        z-index    : 11;
+        padding    : 0 100px;
+        h3 {
+            font-size: $intro;
+        }
+        p {
+            font-size: $lauftext;
+        }
+    }
+    .minipreview {
+        @extend .toggler;
+        bottom     : 40px;
+        width      : 300px;
+        height     : 70px;
+        list-style : none;
+        white-space: nowrap;
+        overflow-y : hidden;
+        margin     : 0;
+        li {
+            width           : 50px;
+            height          : 50px;
+            border-radius   : 0;
+            background-color: transparent;
+            background-size : cover;
+            &.active {
+                background-color: transparent;
+            }
+        }
+        li:first-child {
+            margin: 0;
+        }
+    }
+    .counter {
+        @extend .toggler;
+        bottom: 0;
+    }
+    .item-skip {
+        position         : absolute;
+        bottom           : 120px;
+        font-size        : 35px;
+        background-repeat: no-repeat;
+        z-index          : 15;
+        &.next {
+            right              : 10px;
+            background-image   : url('../images/arrow_right.svg');
+            height             : 70px;
+            width              : 70px;
+            bottom             : 55px;
+            background-position: left;
+        }
+        &.prev {
+            left               : 10px;
+            background-image   : url('../images/arrow_left.svg');
+            height             : 70px;
+            width              : 70px;
+            bottom             : 55px;
+            background-position: right;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

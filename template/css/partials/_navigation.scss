@@ -1,0 +1,111 @@
+.navigation {
+    .nav {
+        ul {
+            height: 70px;
+            float : right;
+            li {
+                display: inline;
+                &.active {
+                    a {
+                        color: $blue;
+                    }
+                }
+                a {
+                    color       : $light-grey;
+                    line-height : 50px;
+                    font-size   : $base-font-size;
+                    margin-right: 19px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &.active {
+                    a {
+                        color: $blue;
+                    }
+                }
+                ul {
+                    display: none;
+                }
+            }
+        }
+        .infos {
+            width: 100%;
+            ul {
+                float: right;
+                li {
+                    display: inline;
+                    a {
+                      text-decoration: none;
+                        color    : $light-grey;
+                        font-size: 15px;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        img {
+                            width: 25px;
+                        }
+                    }
+                    &.icon {
+                        margin-right: 0;
+                        a {
+                            margin: 0 3px;
+                        }
+                        &.spacer {
+                            margin-right: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .logo {
+        a {
+            top     : 20px;
+            position: absolute;
+            z-index : 99;
+            left    : 65px;
+            img {
+                width : auto;
+                height: 100px;
+            }
+        }
+        .jubilaeum {
+            img {
+                position: absolute;
+                height  : 40px;
+                width   : auto;
+                top     : 29px;
+                left    : 4px;
+            }
+        }
+    }
+}
+.submenu {
+    margin-top   : 37px;
+    padding-right: 15px;
+    ul {
+        li {
+            list-style: none;
+            a {
+                font-size    : $base-font-size;
+                padding      : 6px 0;
+                position     : relative;
+                display      : block;
+                border-bottom: 1px solid $light-grey;
+                color        : $grey;
+            }
+            &.active {
+                a {
+                    color      : $blue;
+                    font-weight: $bold;
+                }
+            }
+            &:last-child {
+                a {
+                    border: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.wrapperWhite {
+    background-color: white;
+}
+.content {
+    min-height: 450px;
+    color     : $dark-grey;
+    a {
+        color          : $dark-grey;
+        text-decoration: underline;
+        transition     : $transition;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+body.detail {
+    .hero {
+        background-image: url('http://Www.placehold.it/300x300');
+    }
+    .events {
+        padding-bottom: 50px;
+        h3 {
+            margin-top: 40px;
+        }
+        .eventslisted {
+            border-bottom: 1px solid $light-grey;
+            color        : $grey;
+            padding-top  : 15px;
+            p {
+                color      : $grey;
+                font-size  : $lauftext;
+                font-weight: $bold;
+            }
+            a {
+                color: $grey;
+                &::before {
+                    content: '> ';
+                }
+            }
+            &:last-of-type {
+                border-bottom: 1px solid $light-grey;
+            }
+            &.eventbox {
+                padding-top   : 45px;
+                padding-bottom: 10px;
+            }
+            &.newsbox {
+                border-bottom: none!important;
+            }
+            .eventdatum {
+                p {
+                    font-weight: $regular;
+                }
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+}

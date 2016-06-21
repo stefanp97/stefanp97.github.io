@@ -1,0 +1,62 @@
+body.stelle {
+    .hero {
+        background-image: url('http://Www.placehold.it/300x300');
+    }
+    .events-group {
+        padding-right: 15px;
+        margin-top   : 40px;
+        .events-group-item {
+            font-size  : $lauftext;
+            padding    : 6px 0;
+            position   : relative;
+            display    : block;
+            border-top : 1px solid $light-grey;
+            color      : $grey;
+            font-weight: $bold;
+            &.active {
+                color: $red;
+            }
+            &:first-child {
+                border-top: 0;
+            }
+        }
+    }
+    .stellen-box {
+        margin-top      : 20px;
+        margin-bottom   : 20px;
+        max-height      : 200px;
+        background-color: white;
+        .credentials-wrap,
+        .image-wrap {
+            padding: 0;
+        }
+        .image-wrap {
+            img {
+                padding-left: 15px;
+                max-height  : 200px;
+                width       : auto;
+            }
+        }
+        .credentials-wrap {
+            .credentials {
+                font-size   : $lauftext;
+                color       : $grey;
+                font-weight : $bold;
+                padding-left: 10px;
+                .titel {
+                    color        : $dark-grey;
+                    margin-bottom: 0;
+                }
+                .position {
+                    color: $grey;
+                }
+            }
+        }
+    }
+    .kontakt {
+        color          : $grey;
+        text-decoration: none;
+        margin-top     : 25px;
+        display        : block;
+    }
+}
