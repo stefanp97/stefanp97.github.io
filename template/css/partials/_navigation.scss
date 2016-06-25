@@ -1,8 +1,10 @@
 .navigation {
     .nav {
+      height: 80px;
         ul {
-            height: 70px;
+            height: 50px;
             float : right;
+            margin-top: 20px;
             li {
                 display: inline;
                 &.active {
@@ -30,6 +32,7 @@
             }
         }
         .infos {
+          display: none;
             width: 100%;
             ul {
                 float: right;
@@ -61,27 +64,20 @@
     }
     .logo {
         a {
-            top     : 20px;
+            top     : 10px;
             position: absolute;
             z-index : 99;
             left    : 65px;
             img {
                 width : auto;
-                height: 100px;
+                height: 60px;
             }
         }
-        .jubilaeum {
-            img {
-                position: absolute;
-                height  : 40px;
-                width   : auto;
-                top     : 29px;
-                left    : 4px;
-            }
-        }
+
     }
 }
 .submenu {
+
     margin-top   : 37px;
     padding-right: 15px;
     ul {

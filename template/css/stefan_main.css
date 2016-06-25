@@ -442,7 +442,7 @@ th {
   z-index: 0;
   right: 100%;
   width: 100%;
-  height: 335px;
+  height: 400px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -515,7 +515,7 @@ th {
 .carousel-vis .slide-text {
   color: white;
   position: absolute;
-  bottom: -140px;
+  bottom: -115px;
   text-align: center;
   left: 50%;
   width: 100%;
@@ -575,7 +575,7 @@ th {
   background-image: url("../images/arrow_right.svg");
   height: 70px;
   width: 70px;
-  bottom: 55px;
+  bottom: 25px;
   background-position: left;
 }
 
@@ -584,7 +584,7 @@ th {
   background-image: url("../images/arrow_left.svg");
   height: 70px;
   width: 70px;
-  bottom: 55px;
+  bottom: 25px;
   background-position: right;
 }
 
@@ -614,9 +614,14 @@ th {
   color: #FFF;
 }
 
+.navigation .nav {
+  height: 80px;
+}
+
 .navigation .nav ul {
-  height: 70px;
+  height: 50px;
   float: right;
+  margin-top: 20px;
 }
 
 .navigation .nav ul li {
@@ -647,6 +652,7 @@ th {
 }
 
 .navigation .nav .infos {
+  display: none;
   width: 100%;
 }
 
@@ -685,7 +691,7 @@ th {
 }
 
 .navigation .logo a {
-  top: 20px;
+  top: 10px;
   position: absolute;
   z-index: 99;
   left: 65px;
@@ -693,15 +699,7 @@ th {
 
 .navigation .logo a img {
   width: auto;
-  height: 100px;
-}
-
-.navigation .logo .jubilaeum img {
-  position: absolute;
-  height: 40px;
-  width: auto;
-  top: 29px;
-  left: 4px;
+  height: 60px;
 }
 
 .submenu {
@@ -1079,7 +1077,7 @@ a.meanmenu-reveal {
 }
 
 .infoboxwrap .infobox .col-md-3 .box:hover:after, .infoboxwrap .infobox .col-md-3 .box:hover:before {
-  -webkit-animation-duration: 900ms;
+  -webkit-animation-duration: 550ms;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
